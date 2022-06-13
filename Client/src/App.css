@@ -1,0 +1,268 @@
+.App {
+  text-align: center;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.show{
+
+}
+
+body {
+  margin: 0;
+}
+* {
+  font-family: Roboto;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+input {
+  font-size: 1rem;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  /*width: 100%;
+			max-width: 1024px;
+			padding: 20px;
+			margin: auto;*/
+  width: 100%;
+  height: 100%;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.container h2{
+  position: relative;
+  float: left;
+  left: -20px;
+}
+.text-field-filled,
+.text-field-outlined {
+  height: 60px;
+}
+.mr-5{
+  margin-right: 5px;
+}
+.text-field-filled {
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  width: 250px;
+  position: relative;
+  transition: 150ms ease;
+  margin-right: 10px;
+}
+.text-field-filled::before {
+  content: "";
+  display: block;
+  background-color: #005293;
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  bottom: 0;
+  transition: 150ms ease;
+  opacity: 0;
+}
+.text-field-filled:focus-within::before {
+  content: "";
+  display: block;
+  background-color: #6200ee;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.text-field-filled:hover,
+.text-field-filled > input:focus {
+  background-color: #0000001a;
+}
+.text-field-filled > input {
+  outline: none;
+  border-radius: 5px;
+  padding: 30px 10px 10px 15px;
+  background: none;
+  position: relative;
+  border: none;
+  width: 100%;
+}
+.text-field-filled > span {
+  color: #000000ad;
+  font-size: 1rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 5px;
+  line-height: 1px;
+  pointer-events: none;
+}
+.text-field-filled > input:focus ~ span,
+.text-field-filled > input:valid ~ span {
+  color: #6200ee;
+  font-size: 12px;
+  transform: translateY(-12px);
+}
+/* Text Field Outlined */
+.text-field-outlined {
+  border-radius: 5px;
+  border: 1px solid #6200ee;
+  width: 250px;
+  position: relative;
+  transition: 150ms ease;
+}
+.text-field-outlined:focus-within {
+  border-width: 2px;
+}
+.text-field-outlined > input {
+  outline: none;
+  padding: 20px 10px 20px 15px;
+  background: none;
+  position: relative;
+  border: none;
+  width: 100%;
+}
+.text-field-outlined > span {
+  color: #000000ad;
+  font-size: 1rem;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 5px;
+  line-height: 1px;
+  pointer-events: none;
+}
+.text-field-outlined > input:focus ~ span,
+.text-field-outlined > input:valid ~ span {
+  color: #6200ee;
+  background-color: #fff;
+  font-size: 12px;
+  transform: translateY(-29px);
+  padding: 0 5px;
+}
+
+.list-user-container{
+  margin-top:10px;
+  width:70%;
+  display: block;
+  margin: 10px auto;
+  padding-bottom: 40px;
+}
+
+.list-users{
+  width: 100%;
+  position: relative;
+  float: left;
+  border-radius: 5px;
+  background-color: rgb(236, 228, 228);
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.list-users h5{
+  position: relative;
+  float: left;
+  font-size: 20px;
+  color: #888;
+  padding:0px;
+  margin:0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-users h5 span{
+  color:#000 !important;
+  margin-left: 10px;
+}
+
+.user-edit{
+  width: 100%;
+  position: relative;
+  float: left;
+  display: inline-flex;
+  padding: 20px;
+}
+.user-edit label{
+  margin-right: 20px;
+  margin-left:10px;
+}
+.user-edit input{
+  margin-left:0px;
+}
+/******** menu ****/
+
+.dropdown-container {
+  position: relative;
+  float: right;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0 0 0;
+}
+
+.dropdown {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 3px;
+  width: 140px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.fa-angle-down {
+  position: relative;
+  top: 2px;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.rotate-dropdown-arrow {
+  transform: rotate(-180deg);
+}
+
+.dropdown-menu {
+  display: block;
+  flex-direction: column;
+  border-radius: 4px;
+  margin-top: 8px;
+  width: 160px;
+  padding: 10px;
+  transform-origin: top left;
+}
+
+.dropdown-menu button{
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.dropdown-menu span {
+  padding: 10px;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu span:hover {
+  background: #eee;
+}
